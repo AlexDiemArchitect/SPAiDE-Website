@@ -6,32 +6,32 @@
 <title>SPAiDE — AI Compute. On Your Ground. Under Your Control.</title>
 <meta name="description" content="The SPAiDE Pentacube is a modular, mobile data center that deploys anywhere in under 10 minutes — sovereign, European, and built for standard power and logistics infrastructure.">
 
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- ============================ NAV ============================ -->
 <nav class="nav">
   <div class="container">
-    <a href="#top" class="nav-logo"><img src="assets/img/logo-white.png" alt="SPAiDE"></a>
+    <a href="#top" class="nav-logo"><img src="logo-white.png" alt="SPAiDE"></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#problem">The Problem</a></li>
-      <li><a href="#product">The Product</a></li>
-      <li><a href="#team">The Team</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#problem" data-i18n="nav.problem">The Problem</a></li>
+      <li><a href="#product" data-i18n="nav.product">The Product</a></li>
+      <li><a href="#team" data-i18n="nav.team">The Team</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <div class="lang-switch" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="en" aria-pressed="true" class="active">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-i18n="cta.touch">Get in touch</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" data-i18n-attr="aria-label:nav.menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
@@ -40,18 +40,13 @@
 <!-- ============================ HERO ============================ -->
 <header class="hero" id="top">
   <div class="container hero-content">
-    <div class="eyebrow">SPAiDE GmbH · Munich</div>
-    <h1>AI Compute. On Your Ground. <em>Under Your Control.</em></h1>
-    <p class="hero-sub">The SPAiDE Pentacube is a full data center that deploys anywhere in under 10&nbsp;minutes — sovereign, mobile, and built for Europe's existing power and logistics infrastructure.</p>
+    <img src="logo-white.png" alt="SPAiDE" class="hero-logo">
+    <div class="eyebrow" data-i18n="hero.eyebrow">SPAiDE GmbH · Munich</div>
+    <h1 data-i18n="hero.h1">AI Compute. On Your Ground. <em>Under Your Control.</em></h1>
+    <p class="hero-sub" data-i18n="hero.sub">The SPAiDE Pentacube is a full data center that deploys anywhere in under 10&nbsp;minutes — sovereign, mobile, and built for Europe's existing power and logistics infrastructure.</p>
     <div class="hero-actions">
-      <a href="#product" class="btn btn-primary">See the Pentacube</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
-    </div>
-    <div class="hero-strip">
-      <div><strong>&gt;18 kW</strong>Pure compute, PUE &lt;1.25</div>
-      <div><strong>400V / 32A</strong>Standard industrial socket</div>
-      <div><strong>&lt;10 min</strong>Deployment from delivery</div>
-      <div><strong>UniBw Munich</strong>Built on university research</div>
+      <a href="#product" class="btn btn-primary" data-i18n="cta.see">See the Pentacube</a>
+      <a href="#contact" class="btn btn-ghost" data-i18n="cta.touch2">Get in touch</a>
     </div>
   </div>
 </header>
@@ -60,49 +55,54 @@
 <section class="section" id="problem">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">The Problem</div>
-      <h2>Europe's Digital Crisis</h2>
-      <p>Capacity as a production rate, not a construction project: our roadmap is measured in units per month, not years per site.</p>
+      <div class="eyebrow" data-i18n="nav.problem">The Problem</div>
+      <h2 data-i18n="problem.h2">Europe's Digital Crisis</h2>
+      <p data-i18n="problem.sub">Capacity as a production rate, not a construction project: our roadmap is measured in units per month, not years per site.</p>
     </div>
 
     <div class="stat-callout">
       <div class="num">10x</div>
-      <div class="txt">IT capacity needed by 2030 — and conventional data centers cannot meet that demand within existing infrastructural limits.
-        <small>Europe needs ~10 → 35 GW IT load by 2030 (McKinsey via ING)</small>
+      <div class="txt"><span data-i18n="problem.stat">IT capacity needed by 2030 — and conventional data centers cannot meet that demand within existing infrastructural limits.</span>
+        <small data-i18n="problem.stat.src">Europe needs ~10 → 35 GW IT load by 2030 (McKinsey via ING)</small>
       </div>
     </div>
 
+    <figure class="problem-figure">
+      <img src="problem-bottleneck.jpg" alt="Infographic: Europe's digital bottleneck — a US data center in Europe surrounded by structural constraints such as overloaded power grids, permitting delays, and latency, limiting realistic AI compute growth to a fraction of theoretical demand by 2030." data-i18n-attr="alt:problem.fig.alt">
+      <figcaption data-i18n="problem.fig.cap">Why a US-style data center model breaks down in Europe: structural, regulatory, and infrastructure limits cap realistic AI compute growth far below demand.</figcaption>
+    </figure>
+
     <div class="problem-grid">
       <div class="cell">
-        <h4>Grid-constrained by design</h4>
-        <p>New sites are bottlenecked by power availability, transmission capacity, and years-long construction and permitting timelines.</p>
+        <h4 data-i18n="problem.c1.h">Grid-constrained by design</h4>
+        <p data-i18n="problem.c1.p">New sites are bottlenecked by power availability, transmission capacity, and years-long construction and permitting timelines.</p>
       </div>
       <div class="cell">
-        <h4>Compromised sovereignty</h4>
-        <p>US cloud providers control more than 70% of the EU market — Europe spends €264bn a year on foreign IT infrastructure.</p>
+        <h4 data-i18n="problem.c2.h">Compromised sovereignty</h4>
+        <p data-i18n="problem.c2.p">US cloud providers control more than 70% of the EU market — Europe spends €264bn a year on foreign IT infrastructure.</p>
       </div>
       <div class="cell">
-        <h4>Large, immobile, vulnerable</h4>
-        <p>Fixed data centers are exposed, single-point targets that suffer from latency and network congestion at the edge.</p>
+        <h4 data-i18n="problem.c3.h">Large, immobile, vulnerable</h4>
+        <p data-i18n="problem.c3.p">Fixed data centers are exposed, single-point targets that suffer from latency and network congestion at the edge.</p>
       </div>
       <div class="cell">
-        <h4>No compute power in the field</h4>
-        <p>Modern operations — from disaster response to defense — need real compute where the mission is, not three hops away.</p>
+        <h4 data-i18n="problem.c4.h">No compute power in the field</h4>
+        <p data-i18n="problem.c4.p">Modern operations — from disaster response to defense — need real compute where the mission is, not three hops away.</p>
       </div>
     </div>
 
     <div class="quotes">
       <div class="quote">
-        <p>"We have a lot of homework to do to achieve technological sovereignty. But Europe has the strengths and the political resolve to succeed."</p>
-        <cite><b>Henna Virkkunen</b>Executive VP for Tech Sovereignty, Security &amp; Democracy · European Commission, 2025</cite>
+        <p lang="en">"We have a lot of homework to do to achieve technological sovereignty. But Europe has the strengths and the political resolve to succeed."</p>
+        <cite><b>Henna Virkkunen</b><span data-i18n="q1.role">Executive VP for Tech Sovereignty, Security &amp; Democracy</span> · European Commission, 2025</cite>
       </div>
       <div class="quote">
-        <p>"This is essential for our competitiveness, our security, and to protect our social models and democracy."</p>
-        <cite><b>Prof. Monika Schnitzer</b>Chair, German Council of Economic Experts · Sachverständigenrat, 2025</cite>
+        <p lang="en">"This is essential for our competitiveness, our security, and to protect our social models and democracy."</p>
+        <cite><b>Prof. Monika Schnitzer</b><span data-i18n="q2.role">Chair, German Council of Economic Experts</span> · Sachverständigenrat, 2025</cite>
       </div>
       <div class="quote">
-        <p>"The startups for this exist; we should bring them together with large industrial companies — including in defense."</p>
-        <cite><b>Max von Thun</b>Director, Europe &amp; Transatlantic Partnerships · Open Markets Institute, 2026</cite>
+        <p lang="en">"The startups for this exist; we should bring them together with large industrial companies — including in defense."</p>
+        <cite><b>Max von Thun</b><span data-i18n="q3.role">Director, Europe &amp; Transatlantic Partnerships</span> · Open Markets Institute, 2026</cite>
       </div>
     </div>
   </div>
@@ -112,66 +112,66 @@
 <section class="section section--alt" id="product">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">The Product</div>
-      <h2>SPAiDE Pentacube — A Full Data Center, Anywhere</h2>
+      <div class="eyebrow" data-i18n="nav.product">The Product</div>
+      <h2 data-i18n="product.h2">SPAiDE Pentacube — A Full Data Center, Anywhere</h2>
     </div>
 
     <div class="product-hero">
       <div>
-        <p class="tagline">"Wherever <em>a welding machine can run</em> — a full data center can too."</p>
-        <p style="color:var(--slate); font-size:15.5px; max-width:480px;">A fundamentally new infrastructure-compatible form factor, built on research at UniBw Munich. The Pentacube draws on a standard industrial AC socket and moves through the same logistics chains as a Euro pallet — no dedicated electrical infrastructure, no grid upgrades, no construction.</p>
+        <p class="tagline" data-i18n="product.tag">"Wherever <em>a welding machine can run</em> — a full data center can too."</p>
+        <p style="color:var(--slate); font-size:15.5px; max-width:480px;" data-i18n="product.p">A fundamentally new infrastructure-compatible form factor, built on research at UniBw Munich. The Pentacube draws on a standard industrial AC socket and moves through the same logistics chains as a Euro pallet — no dedicated electrical infrastructure, no grid upgrades, no construction.</p>
       </div>
       <div class="product-photo">
-        <img src="assets/img/product-mountain.jpg" alt="SPAiDE Pentacube deployed in a remote mountain landscape">
+        <img src="product-mountain.jpg" alt="SPAiDE Pentacube deployed in a remote mountain landscape" data-i18n-attr="alt:product.photo.alt">
       </div>
     </div>
 
     <div class="spec-strip">
-      <div class="spec"><div class="val">&gt;18 kW</div><div class="lbl">Compute power output enabled by PUE &lt;1.25</div></div>
-      <div class="spec"><div class="val">400V / 32A</div><div class="lbl">Standard industrial AC socket</div></div>
-      <div class="spec"><div class="val">&lt;10 min</div><div class="lbl">Deployment time from delivery</div></div>
-      <div class="spec"><div class="val">120×80×150</div><div class="lbl">cm — Euro pallet dimensions, standard logistics</div></div>
+      <div class="spec"><div class="val">&gt;18 kW</div><div class="lbl" data-i18n="spec1">Compute power output enabled by PUE &lt;1.25</div></div>
+      <div class="spec"><div class="val">400V / 32A</div><div class="lbl" data-i18n="spec2">Standard industrial AC socket</div></div>
+      <div class="spec"><div class="val">&lt;10 min</div><div class="lbl" data-i18n="spec3">Deployment time from delivery</div></div>
+      <div class="spec"><div class="val">120×80×150</div><div class="lbl" data-i18n="spec4">cm — Euro pallet dimensions, standard logistics</div></div>
     </div>
-    <p class="spec-note">Standard 400V / 32A CEE industrial socket — the same connection used for equipment like welding machines.</p>
+    <p class="spec-note" data-i18n="spec.note">Standard 400V / 32A CEE industrial socket — the same connection used for equipment like welding machines.</p>
 
     <div class="why-grid">
       <div class="why-card">
-        <h4>Ultra-Mobile</h4>
-        <p>Fits any Euro pallet, moves with standard logistics — pallet trucks, forklifts, and freight systems.</p>
+        <h4 data-i18n="why1.h">Ultra-Mobile</h4>
+        <p data-i18n="why1.p">Fits any Euro pallet, moves with standard logistics — pallet trucks, forklifts, and freight systems.</p>
       </div>
       <div class="why-card">
-        <h4>Sovereign</h4>
-        <p>European native by design — ITAR-free components, built for European power and regulatory standards.</p>
+        <h4 data-i18n="why2.h">Sovereign</h4>
+        <p data-i18n="why2.p">European native by design — ITAR-free components, built for European power and regulatory standards.</p>
       </div>
       <div class="why-card">
-        <h4>Scalable</h4>
-        <p>Add units to scale capacity linearly, on demand — no bespoke construction project per site.</p>
+        <h4 data-i18n="why3.h">Scalable</h4>
+        <p data-i18n="why3.p">Add units to scale capacity linearly, on demand — no bespoke construction project per site.</p>
       </div>
       <div class="why-card">
-        <h4>Rugged</h4>
-        <p>Built for field conditions, not the server room — from desert heat to disaster response terrain.</p>
+        <h4 data-i18n="why4.h">Rugged</h4>
+        <p data-i18n="why4.p">Built for field conditions, not the server room — from desert heat to disaster response terrain.</p>
       </div>
     </div>
 
     <div class="deploy-gallery">
-      <h3>Deploy Everywhere</h3>
-      <p>Real-world use case: sovereign, tactical AI compute for the Bundeswehr — no fixed infrastructure required.</p>
+      <h3 data-i18n="deploy.h">Deploy Everywhere</h3>
+      <p data-i18n="deploy.p">Real-world use case: sovereign, tactical AI compute for the Bundeswehr — no fixed infrastructure required.</p>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="assets/img/usecase-defense.jpg" alt="Pentacube deployed at a defense field operations site">
-          <span>Defense Locations</span>
+          <img src="usecase-defense.jpg" alt="Pentacube deployed at a defense field operations site" data-i18n-attr="alt:g1.alt">
+          <span data-i18n="g1.l">Defense Locations</span>
         </div>
         <div class="gallery-item">
-          <img src="assets/img/usecase-industrial.jpg" alt="Pentacube deployed at an industrial facility">
-          <span>Industrial Facilities</span>
+          <img src="usecase-industrial.jpg" alt="Pentacube deployed at an industrial facility" data-i18n-attr="alt:g2.alt">
+          <span data-i18n="g2.l">Industrial Facilities</span>
         </div>
         <div class="gallery-item">
-          <img src="assets/img/usecase-disaster.jpg" alt="Pentacube deployed during disaster response">
-          <span>Disaster Management</span>
+          <img src="usecase-disaster.jpg" alt="Pentacube deployed during disaster response" data-i18n-attr="alt:g3.alt">
+          <span data-i18n="g3.l">Disaster Management</span>
         </div>
         <div class="gallery-item">
-          <img src="assets/img/product-desert.jpg" alt="Pentacube deployed in a remote desert area">
-          <span>Remote Areas</span>
+          <img src="product-desert.jpg" alt="Pentacube deployed in a remote desert area" data-i18n-attr="alt:g4.alt">
+          <span data-i18n="g4.l">Remote Areas</span>
         </div>
       </div>
     </div>
@@ -182,68 +182,40 @@
 <section class="section" id="team">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">The Team</div>
-      <h2>Five founders, one shared mission</h2>
-      <p>Defense &amp; security academia, deep-tech operators, and serial founders — with roughly five years of university research behind the product and existing connections into the German defense sector.</p>
+      <div class="eyebrow" data-i18n="nav.team">The Team</div>
+      <h2 data-i18n="team.h2">Five founders, one shared mission</h2>
+      <p data-i18n="team.sub">Defense &amp; security academia, deep-tech operators, and serial founders — with roughly five years of university research behind the product and existing connections into the German defense sector. Meet our two Managing Directors.</p>
     </div>
 
     <div class="team-leads">
       <div class="team-card">
-        <img src="assets/img/team-diem.jpg" alt="Alexander Diem">
+        <img src="team-diem.jpg" alt="Alexander Diem">
         <div>
           <h4>Alexander Diem</h4>
-          <div class="role">Managing Director Strategy / Founder</div>
-          <span class="tag">Architect &amp; Systems Thinker</span>
+          <div class="role" data-i18n="team.diem.role">Managing Director Strategy / Founder</div>
+          <span class="tag" data-i18n="team.diem.tag">Architect &amp; Systems Thinker</span>
           <ul>
-            <li>Independent architect, Vienna</li>
-            <li>Research background in urban development &amp; infrastructure</li>
-            <li>Structural &amp; systems expertise for complex build-outs</li>
-            <li>Expertise in CFD and parametric modelling</li>
+            <li data-i18n="team.diem.b1">Independent architect, Vienna</li>
+            <li data-i18n="team.diem.b2">Research background in urban development &amp; infrastructure</li>
+            <li data-i18n="team.diem.b3">Structural &amp; systems expertise for complex build-outs</li>
+            <li data-i18n="team.diem.b4">Expertise in CFD and parametric modelling</li>
           </ul>
         </div>
       </div>
       <div class="team-card">
-        <img src="assets/img/team-sanwald.jpg" alt="Michael Sanwald">
+        <img src="team-sanwald.jpg" alt="Michael Sanwald">
         <div>
           <h4>Michael Sanwald</h4>
-          <div class="role">Managing Director Operations / Founder</div>
-          <span class="tag">Engineer &amp; Soldier</span>
+          <div class="role" data-i18n="team.san.role">Managing Director Operations / Founder</div>
+          <span class="tag" data-i18n="team.san.tag">Engineer &amp; Soldier</span>
           <ul>
-            <li>Expertise in batteries and electronics (Invenox)</li>
-            <li>Lightweight engineering &amp; automotive (Motorsports)</li>
-            <li>Co-Founder, Blackwave Composites</li>
-            <li>Active-duty reservist in the Bundeswehr</li>
+            <li data-i18n="team.san.b1">Expertise in batteries and electronics (Invenox)</li>
+            <li data-i18n="team.san.b2">Lightweight engineering &amp; automotive (Motorsports)</li>
+            <li data-i18n="team.san.b3">Co-Founder, Blackwave Composites</li>
+            <li data-i18n="team.san.b4">Active-duty reservist in the Bundeswehr</li>
           </ul>
         </div>
       </div>
-    </div>
-
-    <div class="team-partners">
-      <div class="partner-card">
-        <img src="assets/img/team-brunthaler.jpg" alt="Prof. Dr. Stefan Brunthaler">
-        <h4>Prof. Dr. Stefan Brunthaler</h4>
-        <div class="role">Secure SW Engineering · UniBwM</div>
-        <p>Defence &amp; security academia. Postdoc, Univ. of California, Irvine, research for DARPA. Bridges basic research and military requirements.</p>
-      </div>
-      <div class="partner-card">
-        <img src="assets/img/team-soltes.jpg" alt="Dr.-Ing. Martin Šoltés">
-        <h4>Dr.-Ing. Martin Šoltés</h4>
-        <div class="role">Electrified Systems · TH Ulm</div>
-        <p>Joining TH Ulm as Professor of Electrified Drive Systems. Scaled a research spin-off into an OEM, put 1,000+ electric vehicles on the road.</p>
-      </div>
-      <div class="partner-card">
-        <img src="assets/img/team-steffan.jpg" alt="Moritz Steffan">
-        <h4>Moritz Steffan</h4>
-        <div class="role">Director Battery Technology</div>
-        <p>Co-Founder of battery startup Invenox. 15 years of experience in deep tech, supply chain &amp; management (M.Sc. Vehicle Engineering).</p>
-      </div>
-    </div>
-
-    <div class="badge-strip">
-      <span>Defence Networks</span>
-      <span>Serial Founders</span>
-      <span>UniBwM · TUM Alumni</span>
-      <span>Deep-Tech Operators</span>
     </div>
   </div>
 </section>
@@ -252,45 +224,35 @@
 <section class="section section--alt" id="faq">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">FAQ</div>
-      <h2>Questions we get asked</h2>
+      <div class="eyebrow" data-i18n="nav.faq">FAQ</div>
+      <h2 data-i18n="faq.h2">Questions we get asked</h2>
     </div>
 
     <div class="faq-list" id="faqList">
 
       <div class="faq-item open">
-        <button class="faq-q"><span>What problem are you solving?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>Traditional data centers can't meet projected demand within existing constraints — Europe's IT load is expected to grow from 10 to 35 GW by 2030 (McKinsey). Power grid capacity, space, regulation, and construction timelines all fall short. In defense, there's a separate shortage of mobile compute in the field — modern operations need edge solutions with minimal latency.</p></div>
+        <button class="faq-q"><span data-i18n="f1.q">What problem are you solving?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p data-i18n="f1.a">Traditional data centers can't meet projected demand within existing constraints — Europe's IT load is expected to grow from 10 to 35 GW by 2030 (McKinsey). Power grid capacity, space, regulation, and construction timelines all fall short. In defense, there's a separate shortage of mobile compute in the field — modern operations need edge solutions with minimal latency.</p></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q"><span>What's the underlying technology?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>The Pentacube runs on a standard 400V/32A CEE industrial socket — the same connection used for welding machines — delivering over 18 kW of usable compute without dedicated electrical infrastructure or grid upgrades. Its Euro pallet dimensions (120×80×150 cm) make it fully compatible with standard logistics, enabling deployment in under 10 minutes.</p></div>
+        <button class="faq-q"><span data-i18n="f2.q">What's the underlying technology?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p data-i18n="f2.a">The Pentacube runs on a standard 400V/32A CEE industrial socket — the same connection used for welding machines — delivering over 18 kW of usable compute without dedicated electrical infrastructure or grid upgrades. Its Euro pallet dimensions (120×80×150 cm) make it fully compatible with standard logistics, enabling deployment in under 10 minutes.</p></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q"><span>What stage is the product at?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>The first prototype is in the detailed design phase, with the build running through mid-September 2026. It follows roughly five years of underlying university research — this is the first time that research is being turned into a working product.</p></div>
+        <button class="faq-q"><span data-i18n="f3.q">What stage is the product at?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p data-i18n="f3.a">We will have completed a demonstrator by mid-November 2026. It follows roughly five years of underlying university research — this is the first time that research is being turned into a working product.</p></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q"><span>Who is this for?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>Five market segments benefit most from mobile compute: Military &amp; Government (NATO, Bundeswehr, Police, Civil Protection); Energy &amp; Industry (wind farms, oil platforms, mining, construction); Events &amp; Broadcast; Humanitarian Aid (UNHCR, Red Cross, NGOs, disaster relief); and Field Research.</p></div>
+        <button class="faq-q"><span data-i18n="f4.q">Who is this for?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p data-i18n="f4.a">Five market segments benefit most from mobile compute: Military &amp; Government (NATO, Bundeswehr, Police, Civil Protection); Energy &amp; Industry (wind farms, oil platforms, mining, construction); Events &amp; Broadcast; Humanitarian Aid (UNHCR, Red Cross, NGOs, disaster relief); and Field Research.</p></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q"><span>What's your business model?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>A partner-first, phased go-to-market: starting with validated LOIs and joint deployments, then scaling through direct and partner sales. Revenue starts with hardware sales and engineering services, then expands into recurring models — leasing and DCaaS (data center as a service).</p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q"><span>How are you different from Rittal, Armada, or Schneider Electric?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>Rittal builds stationary, bulky rack enclosures — not mobile, rugged, or compact. Armada is capable and plug-and-play but not European, and lacks ultra-mobility and quick availability. Schneider treats data center infrastructure as a sub-division. SPAiDE is a genuinely European company, fully compatible with the European power grid, in a smaller sub-container format built for last-mile deployment.</p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q"><span>How do you protect your IP?</span><span class="icon">+</span></button>
-        <div class="faq-a"><p>We're preparing a patent application and registering a trademark. The core value sits in the systems-level integration — the internal airflow design that saves energy and reduces required volume, shock- and vibration-resistant connections, and the rechargeable battery power supply.</p></div>
+        <button class="faq-q"><span data-i18n="f6.q">How are you different from Rittal, Armada, or Schneider Electric?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p data-i18n="f6.a">Rittal builds stationary, bulky rack enclosures — not mobile, rugged, or compact. Armada is capable and plug-and-play but not European, and lacks ultra-mobility and quick availability. Schneider treats data center infrastructure as a sub-division. SPAiDE is a genuinely European company, fully compatible with the European power grid, in a smaller sub-container format built for last-mile deployment.</p></div>
       </div>
 
     </div>
@@ -301,17 +263,17 @@
 <section class="section" id="contact">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Contact</div>
-      <h2>Let's talk</h2>
-      <p>Reach out to either of our Managing Directors directly, or write to the company address below.</p>
+      <div class="eyebrow" data-i18n="nav.contact">Contact</div>
+      <h2 data-i18n="contact.h2">Let's talk</h2>
+      <p data-i18n="contact.sub">Reach out to either of our Managing Directors directly, or write to the company address below.</p>
     </div>
 
     <div class="contact-grid">
       <div class="contact-card">
         <h4>Michael Sanwald</h4>
-        <div class="role">Managing Director / Founder</div>
+        <div class="role" data-i18n="contact.role1">Managing Director / Founder</div>
         <div class="contact-line">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
           <a href="mailto:sanwald@spaide.de">sanwald@spaide.de</a>
         </div>
         <div class="contact-line">
@@ -321,7 +283,7 @@
       </div>
       <div class="contact-card">
         <h4>Alexander Diem</h4>
-        <div class="role">Managing Director / Founder</div>
+        <div class="role" data-i18n="contact.role2">Managing Director / Founder</div>
         <div class="contact-line">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
           <a href="mailto:diem@spaide.de">diem@spaide.de</a>
@@ -336,7 +298,7 @@
     <div class="contact-company">
       <div>
         <div class="name">SPAiDE GmbH</div>
-        <div class="addr">Kurfürstenstrasse 1 · 80799 Munich · Germany</div>
+        <div class="addr" data-i18n="contact.addr">Kurfürstenstrasse 1 · 80799 Munich · Germany</div>
       </div>
       <a href="https://www.spaide.de" class="btn btn-ghost" target="_blank" rel="noopener">www.spaide.de</a>
     </div>
@@ -346,11 +308,16 @@
 <!-- ============================ FOOTER ============================ -->
 <footer>
   <div class="container">
-    <img src="assets/img/logo-white.png" alt="SPAiDE">
-    <p>© 2026 SPAiDE GmbH · Munich, Germany</p>
+    <img src="logo-white.png" alt="SPAiDE">
+    <p data-i18n="footer.c">© 2026 SPAiDE GmbH · Munich, Germany</p>
+    <nav class="footer-links" aria-label="Impressum und Datenschutz">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="main.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
